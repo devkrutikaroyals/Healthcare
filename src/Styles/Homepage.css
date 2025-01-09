@@ -1,0 +1,49 @@
+/* General Styles */
+.homepage {
+    font-family: "Arial", sans-serif;
+    color: #333;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden;
+  }
+  
+  /* Hero Section */
+  .hero-section {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url('/images/img3.jpg') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8); /* Text shadow for better readability */
+  }
+  
+  .hero-section h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    animation: highlight 2s infinite alternate; /* Highlight animation */
+  }
+  
+  .hero-section p {
+    font-size: 1.5rem;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  /* Highlight Animation */
+  @keyframes highlight {
+    0% {
+      color: #ffcc00;
+      text-shadow: 0 4px 8px rgba(255, 204, 0, 0.5);
+    }
+    100% {
+      color: white;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+    }
+  }
+  
