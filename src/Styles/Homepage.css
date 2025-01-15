@@ -1,49 +1,56 @@
-/* General Styles */
+
 .homepage {
-    font-family: "Arial", sans-serif;
-    color: #333;
-    width: 100%;
-    height: 100vh; /* Full viewport height */
-    overflow: hidden;
+  font-family: "Poppins", sans-serif; 
+  width: 100%;
+  height: 100vh; 
+  background: url('../images/bg1.jpg') no-repeat center center/cover; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.text-container {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+  padding: 20px 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  opacity: 0.9; /* Slight transparency */
+  max-width: 80%;
+  animation: moveContainer 6s ease-in-out infinite; /* Apply movement to the entire text container */
+}
+
+/* Move Container Animation (Move entire text container side to side) */
+@keyframes moveContainer {
+  0% {
+    transform: translateX(0); /* Start at normal position */
   }
-  
-  /* Hero Section */
-  .hero-section {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    background: url('/images/img3.jpg') no-repeat center center/cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8); /* Text shadow for better readability */
+  50% {
+    transform: translateX(20px); /* Move slightly to the right */
   }
-  
-  .hero-section h1 {
-    font-size: 3.5rem;
-    margin-bottom: 20px;
-    font-weight: bold;
-    animation: highlight 2s infinite alternate; /* Highlight animation */
+  100% {
+    transform: translateX(0); /* Move back to the original position */
   }
-  
-  .hero-section p {
-    font-size: 1.5rem;
-    max-width: 600px;
-    margin: 0 auto;
-  }
-  
-  /* Highlight Animation */
-  @keyframes highlight {
-    0% {
-      color: #ffcc00;
-      text-shadow: 0 4px 8px rgba(255, 204, 0, 0.5);
-    }
-    100% {
-      color: white;
-      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
-    }
-  }
-  
+}
+
+/* Text Styles for "Welcome" */
+.text-container h1 {
+  font-size: 3.5rem;
+  color: #03779e;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-transform: uppercase; /* Uppercase for headings */
+  letter-spacing: 2px; /* Adds spacing between letters */
+  /* Removed animation for highlight */
+}
+
+/* Text Styles for Paragraph */
+.text-container p {
+  font-size: 1.2rem;
+  color: #444;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6; /* Line spacing for readability */
+  font-weight: bold; /* Make the paragraph text bold */
+}
