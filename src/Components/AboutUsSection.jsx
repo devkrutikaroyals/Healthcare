@@ -1,9 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../Styles/AboutUsSection.css'; // Import the CSS file
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // Import AOS styles
 import About from '../images/img8.jpg'; // Import the image
 
 const AboutUsSection = () => {
   const [showMore, setShowMore] = useState(false); // State for "Read More" functionality
+
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true }); // Initialize AOS
+  }, []);
 
   const handleReadMore = () => {
     setShowMore(!showMore); // Toggle the "Read More" state
@@ -13,9 +19,13 @@ const AboutUsSection = () => {
     <section className="about-us-section">
       {/* Page heading */}
       <h1 className="page-heading">About Us</h1>
-      
+
       <div className="about-us-container">
-        <div className="about-us-text-content">
+        {/* Left Text Content */}
+        <div
+          className="about-us-text-content"
+          data-aos="fade-right" // AOS animation for text content
+        >
           <h1 className="about-us-title">
             We always deliver expertise and compassion in every interaction.
           </h1>
@@ -28,11 +38,20 @@ const AboutUsSection = () => {
           <p className="about-us-description">
             "Experience top-notch medical care at General Hospital, where our expert team of doctors and modern facilities ensure your well-being. Rest easy in our luxurious accommodations and ease your worries."
           </p>
-          <button className="about-us-button" onClick={handleReadMore}>
+          <button
+            className="about-us-button"
+            onClick={handleReadMore}
+            data-aos="zoom-in" // AOS animation for the button
+            data-aos-delay="500" // Delay for the animation
+          >
             {showMore ? "Show Less" : "Read More"}
           </button>
           {showMore && (
-            <div className="additional-info">
+            <div
+              className="additional-info"
+              data-aos="fade-up" // AOS animation for additional info
+              data-aos-delay="700" // Delay for the animation
+            >
               <h3>Our Healthcare Services</h3>
               <ul>
                 <li>Comprehensive medical check-ups</li>
@@ -48,7 +67,13 @@ const AboutUsSection = () => {
             </div>
           )}
         </div>
-        <div className="about-us-image-container">
+
+        {/* Right Image */}
+        <div
+          className="about-us-image-container"
+          data-aos="fade-left" // AOS animation for image
+          data-aos-delay="300" // Delay for image animation
+        >
           <img
             src={About}
             alt="Doctors performing surgery"

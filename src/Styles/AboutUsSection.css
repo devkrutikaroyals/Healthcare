@@ -1,3 +1,4 @@
+/* General Styles */
 .page-heading {
   text-align: center;
   font-size: 36px;
@@ -7,8 +8,8 @@
 }
 
 .about-us-section {
-  background-color: #f5faff; /* Light blue background */
-  padding: 40px 20px;
+  background-color: #d6e4f3e3; /* Light pastel blue background */
+  padding: 50px 20px;
 }
 
 .about-us-container {
@@ -23,6 +24,7 @@
 .about-us-text-content {
   flex: 1;
   margin-right: 20px;
+  padding: 20px; /* Add padding for spacing */
 }
 
 .about-us-title {
@@ -48,6 +50,7 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .about-us-button:hover {
@@ -57,18 +60,26 @@
 .about-us-image-container {
   flex: 1;
   text-align: center;
+  padding: 20px; /* Add padding for spacing */
 }
 
 .about-us-image {
   max-width: 100%;
   height: auto;
   border-radius: 8px; /* Rounded corners for the image */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Add shadow to the image */
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.about-us-image:hover {
+  transform: scale(1.05); /* Slight zoom effect */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
 }
 
 .additional-info {
   margin-top: 20px;
   padding: 15px;
-  background-color: #e9f4ff; /* Light blue background */
+  background-color: #eaf5ff; /* Light pastel blue for additional info */
   border-radius: 8px;
   border: 1px solid #d0e7ff; /* Subtle border */
 }
@@ -93,4 +104,30 @@
   margin-top: 10px;
   color: #555555;
   line-height: 1.6;
+}
+
+/* AOS Animations */
+[data-aos] {
+  opacity: 0;
+  transition-property: opacity, transform;
+}
+
+[data-aos][data-aos-ready] {
+  opacity: 1;
+}
+
+[data-aos="fade-up"] {
+  transform: translateY(20px);
+}
+
+[data-aos="fade-up"][data-aos-ready] {
+  transform: translateY(0);
+}
+
+[data-aos="zoom-in"] {
+  transform: scale(0.9);
+}
+
+[data-aos="zoom-in"][data-aos-ready] {
+  transform: scale(1);
 }

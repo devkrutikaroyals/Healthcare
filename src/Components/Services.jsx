@@ -1,11 +1,9 @@
 import React from "react";
 import "../Styles/Services.css";
-
-// Import images
 import consultationImg from "../images/img4.jpg";
 import emergencyImg from "../images/img7.jpg";
 import pharmacyImg from "../images/img11.jpg";
-import wellnessImg from "../images/img7.jpg";
+import wellnessImg from "../images/img14.jpg"; // Updated path for unique image
 
 const Services = () => {
   const services = [
@@ -39,7 +37,12 @@ const Services = () => {
       </p>
       <div className="services-list">
         {services.map((service, index) => (
-          <div className="service-card" key={index}>
+          <div
+            className="service-card"
+            key={index}
+            data-aos="fade-up"
+            data-aos-delay={`${index * 100}`}
+          >
             <img src={service.image} alt={service.title} className="service-image" />
             <h2 className="service-title">{service.title}</h2>
             <p className="service-description">{service.description}</p>

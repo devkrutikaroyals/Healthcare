@@ -1,0 +1,67 @@
+/* General Styles */
+.stats-page {
+  background-color: hsl(194, 66%, 83%); /* Light blue background */
+  background-size: cover;
+  background-position: center;
+  padding: 80px 30px;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  color: #060606;
+}
+
+/* Title and Description */
+.stats-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #0a0a0a;
+  margin-bottom: 10px;
+}
+
+.stats-description {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  color: #0e0e0e;
+}
+
+/* Stats Grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+}
+
+/* Stats Card */
+.stats-card {
+  background:rgb(219, 245, 244);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.stats-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Stats Icon */
+.stats-icon {
+  font-size: 2rem;
+  color: #03779e;
+  margin-bottom: 10px;
+}
+
+/* Stats Count */
+.stats-count {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #101010;
+}
+
+/* Stats Title */
+.stats-title {
+  font-size: 2rem;
+  color: #0e0e0e;
+  margin-top: 5px;
+}

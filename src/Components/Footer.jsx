@@ -1,38 +1,47 @@
 import React from "react";
-import "../Styles/Footer.css"; // Add styles here
+import "../Styles/Footer.css"; // Make sure to use the CSS file
 
 const Footer = () => {
   return (
-    <>
     <footer className="footer">
       <div className="footer-container">
-        <div className="footer-section">
+        {/* About Us Section */}
+        <div className="footer-section about-us">
           <h3>About Us</h3>
           <p>
-            We are committed to providing quality healthcare services to our community. Your health is our priority.
+            We are dedicated to providing top-notch healthcare services to the
+            community. Our team of experts ensures the best care for all.
           </p>
         </div>
-        <div className="footer-section">
+
+        {/* Quick Links Section */}
+        <div className="footer-section quick-links">
           <h3>Quick Links</h3>
-          <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/services">Services</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/contact">Contact</a></li>
+          <ul className="quick-links-list">
+            <li><a href="#services">Our Services</a></li>
+            <li><a href="#appointments">Book an Appointment</a></li>
+            <li><a href="#faq">FAQs</a></li>
+            <li><a href="#contact">Contact Us</a></li>
           </ul>
         </div>
-        <div className="footer-section">
+
+        {/* Contact Us Section */}
+        <div className="footer-section contact-us">
           <h3>Contact Us</h3>
-          <p>Email: info@healthcare.com</p>
-          <p>Phone: +123-456-7890</p>
-          <p>Address: 123 Healthcare St, City, Country</p>
+          <p>Email: <a href="mailto:contact@healthcare.com">contact@healthcare.com</a></p>
+          <p>Phone: <a href="tel:+1234567890">+1 234 567 890</a></p>
+          <p>Address: 123 Healthcare Street, City, State</p>
         </div>
-      </div>
+
+       
+
+      {/* Footer Bottom Section */}
       <div className="footer-bottom">
-        <p>&copy; 2025 Healthcare. All rights reserved.</p>
+        &copy; 2025 Healthcare Services. All rights reserved.
+      </div>
+
       </div>
     </footer>
-    </>
   );
 };
 

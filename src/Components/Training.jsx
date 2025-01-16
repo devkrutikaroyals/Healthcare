@@ -29,9 +29,8 @@ const Training = () => {
         <p className="training-intro">
           Choose from a variety of training programs to enhance your skills and knowledge.
         </p>
-
         <div className="training-list">
-          <div className="training-card">
+          <div className="training-card" data-aos="fade-right">
             <img src={firstAidImg} alt="First Aid Training" className="training-img" />
             <h2>First Aid Training</h2>
             <p>Learn essential life-saving skills for emergencies.</p>
@@ -39,7 +38,7 @@ const Training = () => {
               Book Training
             </button>
           </div>
-          <div className="training-card">
+          <div className="training-card" data-aos="fade-left" data-aos-delay="200">
             <img src={healthSafetyImg} alt="Health & Safety Training" className="training-img" />
             <h2>Health & Safety Training</h2>
             <p>Understand workplace safety measures and protocols.</p>
@@ -47,7 +46,7 @@ const Training = () => {
               Book Training
             </button>
           </div>
-          <div className="training-card">
+          <div className="training-card" data-aos="zoom-in" data-aos-delay="400">
             <img src={mentalHealthImg} alt="Mental Health Awareness" className="training-img" />
             <h2>Mental Health Awareness</h2>
             <p>Promote mental well-being with expert guidance.</p>
@@ -55,7 +54,7 @@ const Training = () => {
               Book Training
             </button>
           </div>
-          <div className="training-card">
+          <div className="training-card" data-aos="fade-up" data-aos-delay="600">
             <img src={nutritionImg} alt="Nutrition & Wellness" className="training-img" />
             <h2>Nutrition & Wellness</h2>
             <p>Learn about healthy eating habits and lifestyle.</p>
@@ -66,7 +65,7 @@ const Training = () => {
         </div>
 
         {showForm && (
-          <div className="form-overlay">
+          <div className="form-overlay" data-aos="zoom-in">
             <div className="form-container">
               <h2>Training Booking Form</h2>
               <form onSubmit={handleFormSubmit}>
@@ -92,7 +91,9 @@ const Training = () => {
                   </select>
                 </label>
                 <div className="form-actions">
-                  <button type="submit" className="submit-btn">Submit</button>
+                  <button type="submit" className="submit-btn">
+                    Submit
+                  </button>
                   <button type="button" className="cancel-btn" onClick={handleFormClose}>
                     Cancel
                   </button>
